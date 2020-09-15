@@ -28,3 +28,18 @@ spring:
   application:
     name: cloud-payment-service #这个名称是向服务中心注册时所使用的名称
 ```
+
+在启动类添加注解@EnableEurekaClient
+
+```java
+@SpringBootApplication
+@EnableEurekaClient
+public class PaymentMain8081 {
+    public static void main(String[] args) {
+        SpringApplication.run(PaymentMain8081.class, args);
+    }
+}
+
+```
+
+同样的方法将消费者注册
